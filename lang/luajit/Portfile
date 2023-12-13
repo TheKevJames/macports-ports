@@ -8,12 +8,12 @@ PortGroup           legacysupport 1.1
 PortGroup           makefile 1.0
 
 set branch          2.1
-set version_date    2023-11-15T00:41:31Z
-github.setup        LuaJIT LuaJIT 43d0a19158ceabaa51b0462c1ebc97612b420a2e
+set version_date    2023-08-22T00:00:00Z
+github.setup        LuaJIT LuaJIT 03c31124cc3b521ef54fe398e10fa55660a5057d
 revision            0
-checksums           rmd160  ed8b213cdff2939efa0c1203a2b018d02abc84e2 \
-                    sha256  4fefa19bc5600928fb13c928bf5325eaa1c78f2c1738a8ac9552154ef178bb9a \
-                    size    1078803
+checksums           rmd160  fe029f5595d05d7544de36b096da0bb074a1cd57 \
+                    sha256  61dcc7ae3f543ae3cc30e66db060e31e2a77e4be34ee65e370c953d112b4d60c \
+                    size    1073919
 
 set version_date_s  [clock scan "${version_date}" -format {%Y-%m-%dT%H:%M:%SZ} -timezone :UTC]
 version             ${branch}.${version_date_s}
