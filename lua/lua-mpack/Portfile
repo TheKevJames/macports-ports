@@ -1,12 +1,17 @@
 # -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
 
 PortSystem          1.0
-PortGroup           luarocks_org 1.0
+PortGroup           github 1.0
+PortGroup           luarocks 1.0
+
+github.setup libmpack  libmpack-lua 1.0.11
+github.tarball_from    releases
 
 name                lua-mpack
-version             1.0.10
+version             1.0.11
 revision            0
-luarocks.rock       mpack-${version}-0.src.rock
+luarocks.branches   5.1 5.2 5.3
+luarocks.setup      mpack 1.0.11-0 rockspec
 license             MIT
 maintainers         {l2dy @l2dy} openmaintainer
 
@@ -14,10 +19,11 @@ description         msgpack for Lua
 long_description    libmpack is a simple implementation of msgpack. \
                     This port provides bindings for Lua.
 
-checksums           rmd160  050f2d7ef637d818bb38415a3020ff4428ba3728 \
-                    sha256  e6fb34fa0625fab4eafbdbb43871296111091f16a318469152a1bcc18f992a61 \
-                    size    18777
-
-luarocks.worksrcdir libmpack-lua-${version}
-
-luarocks.uploader   tarruda
+checksums           ${distname}${extract.suffix} \
+                    rmd160  02024bc2a8c0fdd5739cac2df8247c0995ca66fc \
+                    sha256  a2d9ec184867ab92ad86e251908619fa13e345b8f2c9bc99df4ac63c8039d796 \
+                    size    18163 \
+                    mpack-${version}.rockspec \
+                    rmd160  76aaf9e8da5fd396a53003a0a881d58afc347ea4 \
+                    sha256  0a7fec28735ccdc79abd423c6c716a6098335a8d82c479646cb457c5d86c9e2a \
+                    size    449
