@@ -1,0 +1,24 @@
+# -*- coding: utf-8; mode: tcl; tab-width: 4; indent-tabs-mode: nil; c-basic-offset: 4 -*- vim:fenc=utf-8:ft=tcl:et:sw=4:ts=4:sts=4
+
+PortSystem          1.0
+PortGroup           luarocks_org 1.0
+
+name                lua-compat53
+version             0.11
+revision            0
+luarocks.rock       compat53-${version}-1.src.rock
+luarocks.branches   5.1 5.2 5.3
+license             MIT
+maintainers         {@thekevjames thekev.in:macports} openmaintainer
+
+description         Lua 5.3 Compatibility for Lua 5.1 and 5.2
+long_description    Lua module and a set of C files which \
+                    provide (most of) the API of Lua 5.3 (both Lua functions and C API) \
+                    for projects using Lua 5.1 or Lua 5.2.
+
+checksums           rmd160  aca41946620bdc07a8d599c68e1a8dfc0fcf8175 \
+                    sha256  e0aedb2107a38fe84f75051bc49bd78a42a03af2875e5b17af1aa1a15a5a27c3 \
+                    size    77239
+
+luarocks.worksrcdir         lua-compat-5.3-${version}
+luarocks.uploader           lunarmodules
