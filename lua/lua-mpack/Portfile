@@ -4,7 +4,7 @@ PortSystem          1.0
 PortGroup           luarocks_org 1.0
 
 name                lua-mpack
-version             1.0.9
+version             1.0.10
 revision            0
 luarocks.rock       mpack-${version}-0.src.rock
 license             MIT
@@ -14,11 +14,9 @@ description         msgpack for Lua
 long_description    libmpack is a simple implementation of msgpack. \
                     This port provides bindings for Lua.
 
-checksums           rmd160  1421da2acf8dab8023013f3eb1e6256ad335e40c \
-                    sha256  0ec2b3d0dc9a9f234c7ce7ef2d4994065ec703315ba4fae6a75fe2082b54ac35 \
-                    size    18733
-
-patchfiles-append   patch-c_std.diff
+checksums           rmd160  050f2d7ef637d818bb38415a3020ff4428ba3728 \
+                    sha256  e6fb34fa0625fab4eafbdbb43871296111091f16a318469152a1bcc18f992a61 \
+                    size    18777
 
 luarocks.worksrcdir libmpack-lua-${version}
 
